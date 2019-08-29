@@ -6,8 +6,9 @@ print(checklist)
 checklist.append('Orange')
 print(checklist)
 
-def create(item):
-    checklist.append(item)
+def read(index):
+    item = checklist[0]
 
-create ('black')
-print(checklist)
+
+read ('index')
+print(checklist[0])
