@@ -1,14 +1,17 @@
-
-
 checklist = list()
-checklist.append('Blue')
-print(checklist)
-checklist.append('Orange')
-print(checklist)
+
+def create(item):
+    checklist.append('black')
+    checklist.append('red')
 
 def read(index):
-    item = checklist[0]
+    item = checklist[1]
 
 
-read ('index')
-print(checklist[0])
+
+
+create('item')
+print(checklist)
+
+read('index')
+print(checklist)
