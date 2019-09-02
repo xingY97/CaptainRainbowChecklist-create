@@ -24,7 +24,7 @@ def destory (index):
 def list_all_items():
     index = 0
     for list_item in checklist:
-        print("{} {}".format(index, list_item))
+        print("\033[1;33;40m{} \033[0;36m{}".format(index, list_item))
         index += 1
 
 def mark_completed(index):
@@ -36,7 +36,7 @@ def mark_uncompleted(index):
 def select(function_code):
     #Create item
     if function_code == "C":
-        input_item = user_input("create item:")
+        input_item = user_input("\033[0;32m create item:")
         create(input_item)
     #Read item
     elif function_code == "R":
@@ -62,7 +62,7 @@ def select(function_code):
     elif function_code == "Q":
         #THis is where we want to stop out loop
         return False  
-    #Catch all
+    
     else:
         print("Unknown Option")
 
