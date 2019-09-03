@@ -110,5 +110,5 @@ test()
 running = True
 while running: 
     selection = user_input(
-    " Press C to create item to list\n R to Read item\n P to display all item\n U to update an item from list\n Press Q to Exit\n")
+    " Press C to create item to list\n R to Read item\n P to display all item\n U to update an item from list\n RM to remove an item\n UC to unmark an item \n Press Q to Exit\n")
     running = select(selection)
