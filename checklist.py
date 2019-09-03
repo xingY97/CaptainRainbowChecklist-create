@@ -15,6 +15,7 @@ def read(index):
 
 #update
 def update(index,item):
+    index = int(index)
     checklist[index] = item
 
 #destory
@@ -66,6 +67,7 @@ def select(function_code):
     
     else:
         print("Unknown Option")
+    return True
 
 def user_input(prompt):
     #the input function will display a message in the terminal
@@ -107,7 +109,6 @@ test()
 
 running = True
 while running: 
-    
     selection = user_input(
     " Press C to create item to list\n R to Read item\n P to display all item\n U to update an item from list\n Press Q to Exit\n")
     running = select(selection)
