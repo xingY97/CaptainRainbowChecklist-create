@@ -26,6 +26,7 @@ def list_all_items():
     for list_item in checklist:
         print("\033[1;33;40m{} \033[0;36m{}".format(index, list_item))
         index += 1
+        
 
 def mark_completed(index):
     update(index, "{}{}".format("√", checklist[int(index)]))
@@ -74,14 +75,17 @@ def user_input(prompt):
 #test
 def test():
     create("purple sox")
+    
     create("red cloak")
-
+    
     print(read(0))
     
     update(0,"purple socks")
     destory(1)
 
-    print(read(0))
+    mark_completed(0)
+
+    """print(read(0))
     list_all_items()
 
     mark_completed(0)
@@ -92,7 +96,7 @@ def test():
     list_all_items()
     
     select("R")
-    list_all_items()
+    list_all_items()"""
 
 
     #user_value = user_input("Please Enter a value:")
@@ -105,5 +109,5 @@ running = True
 while running: 
     
     selection = user_input(
-    " Press C to create item to list\n R to Read item\n P to display all item\n U to update an item from list\n Press Q to Exit")
+    " Press C to create item to list\n R to Read item\n P to display all item\n U to update an item from list\n Press Q to Exit\n")
     running = select(selection)
